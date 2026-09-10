@@ -1,4 +1,4 @@
-function CustomersSay() {
+function CustomerStory() {
   return (
     <section>
       <h2>Testimonials</h2>
@@ -11,11 +11,11 @@ function CustomersSay() {
 
       <article>
         <p>★★★★★</p>
-        <p>"One of my favourite restaurants."</p>
+        <p>"One of my favorite restaurants."</p>
         <span>John</span>
       </article>
     </section>
   );
 }
 
-export default CustomersSay;
+export default CustomerStory;
