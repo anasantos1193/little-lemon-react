@@ -616,3 +616,103 @@ footer a:hover {
     height: 230px;
   }
 }
+/* ========================================
+   HOVER — CARDS DOS PRATOS
+======================================== */
+
+.special-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.special-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.special-card img {
+  transition: transform 0.5s ease;
+}
+
+.special-card:hover img {
+  transform: scale(1.07);
+}
+
+
+/* ========================================
+   HOVER — IMAGENS GERAIS
+======================================== */
+
+.hero-image,
+.booking-image,
+.chicago img {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.4s ease;
+}
+
+.hero-image:hover,
+.booking-image:hover,
+.chicago img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   HOVER — BOTÕES
+======================================== */
+
+.reserve-button,
+.booking-form input[type="submit"] {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.reserve-button:hover,
+.booking-form input[type="submit"]:hover {
+  transform: translateY(-3px);
+  background-color: #ffe45c;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ========================================
+   HOVER — TESTIMONIALS
+======================================== */
+
+.testimonial-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+/* ========================================
+   SCROLL REVEAL
+======================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
