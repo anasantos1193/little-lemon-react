@@ -1,7 +1,11 @@
 function Header() {
   return (
     <header>
-      <img src="/Logo.svg" alt="Little Lemon logo" />
+      <img
+        src="/Logo.svg"
+        alt="Little Lemon logo"
+        className="logo"
+      />
     </header>
   );
 }

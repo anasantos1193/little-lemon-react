@@ -1,16 +1,14 @@
-/* =========================
-   GENERAL PAGE
-========================= */
-
-* {
-  box-sizing: border-box;
+/* ==============================
+   GLOBAL
+============================== */
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333333;
-  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .App {
@@ -19,262 +17,602 @@ body {
   flex-direction: column;
 }
 
+.App > main {
+  flex: 1;
+}
 
-/* =========================
-   HEADER
-========================= */
+* {
+  box-sizing: border-box;
+}
 
-.App-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 20px 10%;
+.App {
+  width: 100%;
+  min-height: 100vh;
   background-color: #ffffff;
 }
 
-
-/* =========================
-   HEADINGS
-========================= */
-
-h1 {
-  font-size: 40px;
-  line-height: 1.2;
-  color: #495e57;
-  margin-bottom: 20px;
+main {
+  width: 100%;
 }
 
-h2 {
-  font-size: 32px;
-  line-height: 1.3;
-  color: #495e57;
-  margin-bottom: 16px;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 1.4;
-  margin-bottom: 12px;
-}
-
-h4 {
-  font-size: 20px;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-
-h5 {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 8px;
-}
-
-h6 {
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 8px;
+section {
+  width: 100%;
 }
 
 
-/* =========================
-   PARAGRAPHS AND SPANS
-========================= */
+/* ==============================
+   HEADER
+============================== */
 
-p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 16px;
+header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-span {
-  font-size: 16px;
+header img {
+  width: 180px;
+  height: auto;
+  display: block;
 }
 
 
-/* =========================
+/* ==============================
    NAVIGATION
-========================= */
+============================== */
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 20px 25px;
 }
 
 nav ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 30px;
-
-  list-style: none;
   margin: 0;
   padding: 0;
-}
+  list-style: none;
 
-nav li {
-  font-size: 16px;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #333333;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 nav a:hover {
-  color: #f4ce14;
+  color: #495e57;
 }
 
 
-/* =========================
-   MAIN CONTENT
-========================= */
+/* ==============================
+   HERO
+============================== */
 
-main {
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 60px 10%;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-  width: 100%;
+.hero {
+  width: calc(100% - 40px);
   max-width: 900px;
+  margin: 0 auto 55px;
+  padding: 35px 45px;
 
+  background-color: #495e57;
+  border-radius: 16px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 55px;
+  align-items: center;
+}
+
+.hero-text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
 
-  gap: 20px;
+.hero-text h1 {
+  margin: 0;
+  color: #f4ce14;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.hero-text h2 {
+  margin: 7px 0 20px;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.hero-text p {
+  max-width: 420px;
+  margin: 0 0 28px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 
-/* =========================
-   IMAGES
-========================= */
+/* ==============================
+   RESERVE BUTTON
+============================== */
 
-img {
-  max-width: 100%;
-  height: auto;
+.reserve-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 13px 24px;
+
+  background-color: #f4ce14;
+  color: #333333;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: transform 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.reserve-button:hover {
+  background-color: #ffe35c;
+  transform: translateY(-2px);
+}
+
+
+/* ==============================
+   HERO IMAGE
+============================== */
+
+.hero-image-container {
+  width: 100%;
+}
+
+.hero-image {
+  display: block;
+
+  width: 100%;
+  height: 230px;
+
+  object-fit: cover;
+
   border-radius: 12px;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* ==============================
+   SPECIALS
+============================== */
 
-button {
-  background-color: #f4ce14;
+.specials {
+  width: calc(100% - 40px);
+  max-width: 900px;
+  margin: 0 auto 70px;
+}
+
+.specials h2 {
+  margin: 0 0 25px;
+  font-size: 26px;
+  color: #333333;
+}
+
+
+/* IMPORTANT: 3 CARDS SIDE BY SIDE */
+
+.specials-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+  align-items: stretch;
+}
+
+
+/* ==============================
+   SPECIAL CARD
+============================== */
+
+.special-card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  background-color: #edefee;
+
+  border-radius: 14px 14px 8px 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* SPECIAL IMAGES */
+
+.special-card > img {
+  display: block;
+
+  width: 100% !important;
+  height: 180px !important;
+
+  max-width: 100%;
+
+  object-fit: cover;
+
+  margin: 0;
+}
+
+
+/* CARD TEXT */
+
+.special-card-content {
+  padding: 18px;
+  flex: 1;
+}
+
+.special-card-content h3 {
+  margin: 0 0 10px;
+
   color: #333333;
 
-  border: none;
-  border-radius: 8px;
-
-  padding: 12px 24px;
-
-  font-size: 16px;
-  font-weight: bold;
-
-  cursor: pointer;
+  font-size: 18px;
 }
 
-button:hover {
-  background-color: #e5bd12;
+.special-card-content p {
+  margin: 0;
+
+  color: #555555;
+
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 
-/* =========================
-   FORMS
-========================= */
+/* ==============================
+   TESTIMONIALS
+============================== */
 
-input,
-select,
-textarea {
+.testimonials {
+  width: calc(100% - 40px);
+  max-width: 900px;
+
+  margin: 0 auto 70px;
+}
+
+.testimonials h2 {
+  margin-bottom: 25px;
+
+  font-size: 26px;
+}
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+.testimonial-card {
+  background-color: #edefee;
+
+  padding: 25px;
+
+  border-radius: 12px;
+}
+
+.testimonial-card p {
+  line-height: 1.5;
+}
+
+
+/* ==============================
+   CHICAGO / ABOUT
+============================== */
+
+.chicago {
+  width: calc(100% - 40px);
+  max-width: 900px;
+
+  margin: 0 auto 70px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+.chicago-text h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  color: #495e57;
+}
+
+.chicago-text h3 {
+  margin: 5px 0 20px;
+
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+.chicago-text p {
+  line-height: 1.6;
+
+  color: #555555;
+}
+
+.chicago-images {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.chicago-image {
+  display: block;
+
+  width: 100%;
+  height: 190px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+
+/* ==============================
+   BOOKING PAGE
+============================== */
+
+.booking-page {
+  width: calc(100% - 40px);
+  max-width: 650px;
+
+  margin: 50px auto 80px;
+}
+
+.booking-page h1 {
+  color: #495e57;
+
+  font-size: 36px;
+
+  margin-bottom: 10px;
+}
+
+.booking-form {
+  margin-top: 30px;
+
+  display: grid;
+
+  gap: 12px;
+}
+
+.booking-form label {
+  font-weight: 600;
+
+  margin-top: 8px;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+
   padding: 12px;
 
   border: 1px solid #cccccc;
+
   border-radius: 6px;
 
   font-size: 16px;
-  font-family: inherit;
+}
+
+.booking-form input[type="submit"] {
+  margin-top: 20px;
+
+  background-color: #f4ce14;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 700;
 }
 
 
-/* =========================
-   FORM BUTTONS
-========================= */
+/* ==============================
+   CONFIRMATION PAGE
+============================== */
 
-.form-buttons {
+.confirmed-booking {
+  width: calc(100vw - 40px) !important;
+  max-width: none !important;
+  min-height: 60vh;
+
+  margin: 0 auto !important;
+  padding: 40px 20px;
+
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center !important;
+}
+
+.confirmed-booking h1 {
   width: 100%;
+  margin: 0 0 12px;
 
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 
-  gap: 20px;
+  color: #495e57;
+  font-size: 38px;
 }
 
+.confirmed-booking p {
+  width: 100%;
+  margin: 0;
 
-/* =========================
+  text-align: center;
+
+  color: #555555;
+  font-size: 16px;
+}
+/* ==============================
    FOOTER
-========================= */
+============================== */
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  padding: 40px 10%;
-
+  width: 100%;
   background-color: #495e57;
+  color: #ffffff;
+
+  padding: 18px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 13px;
   color: #ffffff;
 }
 
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-@media (max-width: 768px) {
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+}
 
-  .App-header {
-    flex-direction: column;
-    gap: 20px;
+footer a:hover {
+  color: #f4ce14;
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 800px) {
+
+  .hero-content {
+    grid-template-columns: 1fr 260px;
+
+    gap: 30px;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  .specials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chicago {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  header img {
+    width: 150px;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 12px;
+    gap: 14px;
   }
 
-  main {
-    padding: 30px 20px;
+  .hero {
+    width: calc(100% - 30px);
+
+    padding: 25px;
+
+    margin-bottom: 40px;
   }
 
-  h1 {
-    font-size: 32px;
+  .hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
   }
 
-  h2 {
-    font-size: 26px;
+  .hero-text h1 {
+    font-size: 34px;
   }
 
-  .form-buttons {
-    flex-direction: column;
+  .hero-image {
+    height: 210px;
   }
 
-  footer {
-    flex-direction: column;
-    gap: 20px;
+  .specials {
+    width: calc(100% - 30px);
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special-card > img {
+    height: 210px !important;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chicago {
+    width: calc(100% - 30px);
+  }
+
+  .chicago-images {
+    grid-template-columns: 1fr;
+  }
+
+  .chicago-image {
+    height: 230px;
   }
 }
